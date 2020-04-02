@@ -1,0 +1,19 @@
+// Colors
+$primary-bg-color: #eaeaea;
+$nav-primary-text-color: rgb(255, 75, 165);
+
+// Types
+$primary-type: 'Nunito', sans-serif;
+
+// Sizes
+$nav-height: 15vh;
+
+@mixin pagePadding {
+  padding-top: $nav-height;
+}
+
+@keyframes underline {
+  to {
+    width: 100%;
+  }
+}

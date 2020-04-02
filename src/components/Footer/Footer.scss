@@ -1,0 +1,37 @@
+@import "../../utils/utils";
+
+footer {
+  padding: 2rem 0;
+  height: 20vh;
+  background-color: $primary-bg-color;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $nav-primary-text-color;
+
+}
+
+.footer {
+  &__section {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: darken($nav-primary-text-color, 20%)
+    }
+    ul {
+      margin-top: 0.5rem;
+      li {
+        margin-top: 0.2rem;
+      }
+      li::before {
+        content: "\21E8";
+        margin-right: 0.4rem;
+      }
+    }
+  }
+}

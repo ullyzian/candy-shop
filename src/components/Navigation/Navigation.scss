@@ -1,0 +1,53 @@
+@import "../../utils/utils";
+
+.nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 3rem;
+  z-index: 100;
+  background-color: $primary-bg-color;
+  height: $nav-height;
+  &__logo {
+    height: 70%;
+    img {
+      height: 100%;
+    }
+  }
+  &__links-container {
+    &--selected {
+      position: relative;
+      color: darken($nav-primary-text-color, 15%) !important;
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0%;
+        animation: underline 0.5s ease-in-out forwards;
+        background-color: rgb(255, 0, 128);
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        margin: 0 2rem;
+        a {
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          color: $nav-primary-text-color;
+          font-weight: 800;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: darken($nav-primary-text-color, 15%);
+          }
+        }
+      }
+    }
+  }
+}
