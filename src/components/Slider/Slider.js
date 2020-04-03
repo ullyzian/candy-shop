@@ -1,7 +1,6 @@
-import React, { useState, useEffect, createRef } from 'react';
+import React, { useState, useEffect, createRef, useRef } from 'react';
 
 import './Slider.scss';
-import { useRef } from 'react';
 
 const Slider = ({ sliderImages }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,14 +28,30 @@ const Slider = ({ sliderImages }) => {
 
   return (
     <div className="slider">
-      <div className="slider__controls">
-        {sliderImages.map((el, index) => {
-          return <span onClick={() => setCurrentSlide(index)} key={index}></span>;
-        })}
+      <div className="slider__container">
+        <h1>We make candies</h1>
+        <div className="slider__controls">
+          {sliderImages.map((el, index) => {
+            return (
+              <span
+                onClick={() => setCurrentSlide(index)}
+                key={index}
+                className={currentSlide === index ? 'slider__control slider__control--selected' : 'slider__control'}
+              ></span>
+            );
+          })}
+        </div>
       </div>
       <div className="slider__slide-container" ref={containerRef}>
         {sliderImages.map((imgURL, index) => {
-          return <img key={index} ref={refs.current[index]} className="slider__slide" alt="XD" src={imgURL} />;
+          return (
+            <div
+              key={index}
+              ref={refs.current[index]}
+              className="slider__slide"
+              style={{ backgroundImage: `url("${imgURL}")` }}
+            ></div>
+          );
         })}
       </div>
     </div>

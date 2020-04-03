@@ -1,0 +1,77 @@
+
+.drawer {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  animation: drawerFadeIn 0.3s linear forwards;
+  overflow: hidden;
+  &--closing {
+    animation: drawerFadeOut 0.3s ease-in-out forwards;
+  }
+}
+
+.sidebar {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  background-color: rgb(83, 42, 64);
+  height: 100vh;
+  width: 300px;
+  margin-left: 100%;
+  animation: sideSlideRight 0.3s ease-in-out forwards;
+  z-index: 100;
+  padding: 2rem;
+  &--closing {
+    animation: sideHide 0.3s ease-in-out forwards;
+  }
+  &__link {
+    display: block;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+    color: lighten(rgb(83, 42, 64), 70%);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-bottom: lighten(rgb(83, 42, 64), 30%) 1px solid;
+  }
+  &__close {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes sideHide {
+  from {
+    right: 0;
+  } to {
+    right: -1000px;
+  }
+}
+
+@keyframes sideSlideRight {
+  from {
+    right: -1000px;
+  } to {
+    right: 0
+  }
+}
+
+@keyframes drawerFadeIn {
+  from {
+    background-color: rgba(99, 29, 64, 0);
+  } to {
+    background-color: rgba(99, 29, 64, 0.5);
+  }
+}
+
+@keyframes drawerFadeOut {
+  from {
+    background-color: rgba(99, 29, 64, 0.5);
+  } to {
+    background-color: rgba(99, 29, 64, 0);
+  }
+}

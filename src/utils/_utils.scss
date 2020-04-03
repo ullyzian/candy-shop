@@ -8,6 +8,14 @@ $primary-type: 'Nunito', sans-serif;
 // Sizes
 $nav-height: 15vh;
 
+$mobile: 1024px;
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
 @mixin pagePadding {
   padding-top: $nav-height;
 }
