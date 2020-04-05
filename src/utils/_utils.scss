@@ -17,7 +17,7 @@ $mobile: 1024px;
 }
 
 @mixin pagePadding {
-  padding-top: $nav-height;
+  margin-top: $nav-height;
 }
 
 @keyframes underline {

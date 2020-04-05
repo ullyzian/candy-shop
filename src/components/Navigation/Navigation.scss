@@ -1,6 +1,8 @@
-@import "../../utils/utils";
+@import '../../utils/utils';
 
 .nav {
+  top: 0;
+  left: 0;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -29,8 +31,6 @@
       cursor: pointer;
       height: 40px;
       width: 40px;
-      background-color: lighten($primary-bg-color, 10%);
-      border: 2px solid darken($primary-bg-color, 60%);
       border-radius: 0.2rem;
       display: flex;
       justify-content: center;
@@ -40,12 +40,12 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
+        width: 60%;
         span {
           height: 2px;
           width: 100%;
           background-color: black;
-          margin: 2px;
+          margin: 2.5px;
         }
       }
     }
@@ -59,7 +59,7 @@
       color: darken($nav-primary-text-color, 15%) !important;
       &:after {
         position: absolute;
-        content: "";
+        content: '';
         left: 0;
         bottom: 0;
         height: 2px;

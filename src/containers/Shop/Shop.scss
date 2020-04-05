@@ -1,0 +1,9 @@
+.shop {
+  padding: 2rem 8rem;
+  &__items-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    justify-items: center;
+  }
+}

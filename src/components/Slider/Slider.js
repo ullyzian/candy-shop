@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef, useRef } from 'react';
 
 import './Slider.scss';
 
-const Slider = ({ sliderImages }) => {
+const Slider = ({ sliderImages, children }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const scrollToRef = (ref, parent) => {
@@ -29,7 +29,7 @@ const Slider = ({ sliderImages }) => {
   return (
     <div className="slider">
       <div className="slider__container">
-        <h1>We make candies</h1>
+        {children}
         <div className="slider__controls">
           {sliderImages.map((el, index) => {
             return (

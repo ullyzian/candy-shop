@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
-@import "./utils/utils.scss";
+@import './utils/utils.scss';
 
-
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -24,4 +25,9 @@ body {
 img {
   pointer-events: none;
   user-select: none;
+}
+
+.page-container {
+  @include pagePadding;
+  min-height: 65vh;
 }
